@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
@@ -13,22 +12,12 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>Welcome to Tauri!</h1>
+    <div className="bg-black text-white text-center h-screen w-screen p-10 flex items-center justify-center flex-col">
+      <h1 className="text-5xl font-bold">Tauri L</h1>
 
-      <div className="row">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
 
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+
+      <p className="p-5">I created this while learning about Tauri and desktop development.</p>
 
       <form
         className="row"
@@ -37,12 +26,12 @@ function App() {
           greet();
         }}
       >
-        <input
+        <input className="p-2 rounded-lg mx-2 border-gray-700 border-2 bg-black"
           id="greet-input"
           onChange={(e) => setName(e.currentTarget.value)}
           placeholder="Enter a name..."
         />
-        <button type="submit">Greet</button>
+        <button className="bg-gray-700 p-2 rounded-lg font-semibold" type="submit">Greet</button>
       </form>
 
       <p>{greetMsg}</p>
